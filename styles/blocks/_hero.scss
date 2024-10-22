@@ -6,6 +6,7 @@
   }
 
   &__main {
+
     margin-top: 24.08vh;
     padding-inline: 60px;
     display: flex;
@@ -40,10 +41,19 @@
     text-transform: lowercase;
 
   }
-
-
   &__logo {
-
-
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease, filter 0.5s ease;
   }
+  
+  .logo-svg {
+    width: 100%; 
+  }
+  
+  .hero__logo:hover {
+    transform: scale(1.1); 
+    filter: drop-shadow(-32px 29px 76px rgba(255, 252, 229, 0.7));
+  }
+  
 }

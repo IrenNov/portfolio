@@ -6,6 +6,7 @@
     background-color: rgba(34, 32, 38, 0.6);
     backdrop-filter: blur(30px);
     box-shadow: var(--shadow);
+    z-index: 10;
 
 
     &__inner {
