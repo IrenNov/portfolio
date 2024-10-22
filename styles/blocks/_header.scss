@@ -1,0 +1,65 @@
+.header {
+    padding-top: 2.08vw;
+    padding-bottom: 1.04vw;
+    position: sticky;
+    top: 0;
+    background-color: rgba(34, 32, 38, 0.6);
+    backdrop-filter: blur(30px);
+    box-shadow: var(--shadow);
+
+
+    &__inner {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    &__menu {
+
+        display: flex;
+        flex-direction: column;
+        margin-right: 150px;
+
+
+        @include desktop {
+            margin-right: 60px;
+        }
+
+        &-list {
+            display: flex;
+            align-items: center;
+            column-gap: 60px;
+            text-transform: lowercase;
+
+            @include mobile {
+                column-gap: 20px;
+            }
+        }
+        &-link {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            height: 48px;
+            transition: transform 0.2s cubic-bezier(0.34,-0.67,0.35,0.81);
+      
+            @include hover {
+                transform: translateY(-10px);
+              &::after {
+                width: 100%;
+              }
+            }
+      
+            &::after {
+              content: '';
+              position: absolute;
+              top: 80%;
+              left: 50%;
+              translate: -50%;
+              width: 0;
+              height: 7px;
+              background: url(../image/hover-line.svg) center/contain no-repeat;
+              transition-duration: inherit;
+            }
+          }
+    }
+}

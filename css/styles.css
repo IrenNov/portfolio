@@ -1,0 +1,419 @@
+@charset "UTF-8";
+/**
+  Нормализация блочной модели
+ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+  Убираем внутренние отступы слева тегам списков,
+  у которых есть атрибут class
+ */
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+  Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+/**
+  Убираем внешние отступы вертикали нужным тегам,
+  у которых есть атрибут class
+ */
+:where(h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+  Убираем стандартный маркер маркированному списку,
+  у которого есть атрибут class
+ */
+:where(ul[class]) {
+  list-style: none;
+}
+
+:where(address[class]) {
+  font-style: normal;
+}
+
+/**
+  Обнуляем вертикальные внешние отступы параграфа,
+  объявляем локальную переменную для внешнего отступа вниз,
+  чтобы избежать взаимодействие с более сложным селектором
+ */
+p {
+  --paragraphMarginBottom: 24px;
+  margin-block: 0;
+}
+
+/**
+  Внешний отступ вниз для параграфа без атрибута class,
+  который расположен не последним среди своих соседних элементов
+ */
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+/**
+  Упрощаем работу с изображениями
+ */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/**
+  Наследуем свойства шрифт для полей ввода
+ */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  height: 100%;
+}
+
+/**
+  Плавный скролл
+ */
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  min-height: 100%;
+  /**
+    Унифицированный интерлиньяж
+   */
+  line-height: 1.5;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+ */
+svg *[fill] {
+  fill: currentColor;
+}
+
+svg *[stroke] {
+  stroke: currentColor;
+}
+
+/**
+  Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+ */
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+  Удаляем все анимации и переходы для людей,
+  которые предпочитают их не использовать
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("../fonts/SpaceMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Anton";
+  src: url("../fonts/Anton-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --color-dark: #1D111F;
+  --color-dark-alt: #203139;
+  --color-light: #FFE4B2;
+  --color-light-text: #CEB992;
+  --color-dark-rgba: rgba(29, 17, 31, 0.8);
+  --color-bg-light: #DFCCA9;
+  --color-bg-gradient: radial-gradient(566.53% 171.01% at 70.96% 49.95%, rgb(68, 64, 77) 0%, rgb(34, 32, 38) 20.68762332201004%, rgb(32, 49, 57) 100%);
+  --border: 1px solid var(--color-dark);
+  --border-radius: 14px;
+  --border-radius-small: 7px;
+  --border-radius-large: 45px;
+  --color-white: #fff;
+  --color-black: #000;
+  --shadow: 0 4px 15px var(--color-dark-rgba);
+  --font-family-base: "Space Mono", sans-serif;
+  --font-family-second: "Anton", sans-serif;
+  --transition-duration: 0.2s;
+  --container-width: 1420px;
+  --container-padding-x: 20px;
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  -webkit-clip-path: inset(100%) !important;
+          clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 767px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .visible-mobile {
+    display: none !important;
+  }
+}
+
+body {
+  font-size: clamp(16px, 1.4583333333vw, 28px);
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  line-height: 1.28;
+  letter-spacing: -0.05em;
+  color: var(--color-light-text);
+  background: var(--color-bg-gradient);
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-family-second);
+  font-weight: 400;
+}
+
+h1, .h1 {
+  font-size: clamp(43px, 3.3333333333vw, 64px);
+}
+
+h2, .h2 {
+  font-size: clamp(36px, 2.0833333333vw, 40px);
+}
+
+h3, .h3 {
+  font-size: clamp(26px, 1.5625vw, 30px);
+}
+
+h4, .h4 {
+  font-size: clamp(18px, 1.0416666667vw, 20px);
+}
+
+.header {
+  padding-top: 2.08vw;
+  padding-bottom: 1.04vw;
+  position: sticky;
+  top: 0;
+  background-color: rgba(34, 32, 38, 0.6);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  box-shadow: var(--shadow);
+}
+.header__inner {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.header__menu {
+  display: flex;
+  flex-direction: column;
+  margin-right: 150px;
+}
+@media (max-width: 1366px) {
+  .header__menu {
+    margin-right: 60px;
+  }
+}
+.header__menu-list {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+  text-transform: lowercase;
+}
+@media (max-width: 767px) {
+  .header__menu-list {
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+}
+.header__menu-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  transition: transform 0.2s cubic-bezier(0.34, -0.67, 0.35, 0.81);
+}
+@media (hover: hover) {
+  .header__menu-link:hover {
+    transform: translateY(-10px);
+  }
+  .header__menu-link:hover::after {
+    width: 100%;
+  }
+}
+@media (hover: none) {
+  .header__menu-link:active {
+    transform: translateY(-10px);
+  }
+  .header__menu-link:active::after {
+    width: 100%;
+  }
+}
+.header__menu-link::after {
+  content: "";
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  translate: -50%;
+  width: 0;
+  height: 7px;
+  background: url(../image/hover-line.svg) center/contain no-repeat;
+  transition-duration: inherit;
+}
+
+.section {
+  padding-block: var(--section-padding-y);
+}
+.section--hidden-x {
+  overflow-x: hidden;
+}
+.section__header {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+@media (max-width: 767px) {
+  .section__header {
+    flex-direction: column;
+    row-gap: 30px;
+    text-align: center;
+  }
+}
+.section__header:not(:last-child) {
+  margin-bottom: 80px;
+}
+@media (max-width: 767px) {
+  .section__header:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+.section__description {
+  max-width: 580px;
+}
+
+.hero {
+  height: 100%;
+}
+@media (max-width: 1366px) {
+  .hero {
+    row-gap: 60px;
+  }
+}
+.hero__main {
+  margin-top: 24.08vh;
+  padding-inline: 60px;
+  display: flex;
+  justify-content: end;
+}
+@media (max-width: 767px) {
+  .hero__main {
+    flex-direction: column;
+  }
+}
+.hero__body {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  max-width: min(32.29vw, 620px);
+  row-gap: 35px;
+}
+@media (max-width: 767px) {
+  .hero__body {
+    display: contents;
+  }
+}
+@media (max-width: 767px) {
+  .hero__title {
+    order: -2;
+    margin-bottom: 10px;
+  }
+}
+.hero__description {
+  text-transform: lowercase;
+}/*# sourceMappingURL=styles.css.map */
