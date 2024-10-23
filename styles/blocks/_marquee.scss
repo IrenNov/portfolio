@@ -1,72 +1,57 @@
 .marquee {
     text-align: center;
-    // position: absolute;
-    // top: -18px;
-    // left: 0;
     width: 37.29vw;
     height: 100vh;
-    overflow-y: hidden;
-
-
-
     &__wrapper {
         max-width: 100%;
-        overflow: hidden;
         background-color: var(--color-accent);
     }
 
     &__content {
-        display: flex;
-        flex-direction: column;
-        width: calc(200%);
+        display: grid;
+        grid-template-areas: "stack";
         padding-block: 18px;
+    }
 
+    &__over {
+        grid-area: stack;
+        filter: drop-shadow(25px 5px 10px var(--color-dark-rgba));
     }
 
     &__svg {
-        padding-inline: 30px 20px;
+        padding-left: 50px;
         display: flex;
         align-items: center;
         white-space: wrap;
         width: 37.29vw;
-        animation: marquee-scroll 22s linear infinite;
-        
+        //filter: drop-shadow(25px 0 25px var(--color-dark-rgba));
+        animation: marquee-scroll 40s linear infinite;
+
         margin-top: -1px;
     }
 
-    &__over {
-        position: absolute;
-        top: 0;
-        width: 37.29vw;
-        height: 100%;
-    }
+
 
     &__svg-second {
-        padding-left: 50px;
         display: flex;
         flex-direction: column;
+        // filter: drop-shadow(25px 0 15px var(--color-dark-rgba));
         animation: marquee-scroll-second 18s linear infinite;
-        
+
         margin-top: -2px;
     }
 
     &__svg-three {
-        padding-inline: 20px 60px;
         display: flex;
         flex-direction: column;
-        animation: marquee-scroll 12s linear infinite;
-        
+        // filter: drop-shadow(25px 5px 10px var(--color-dark-rgba));
+        animation: marquee-scroll 15s linear infinite;
+
         margin-top: -1px;
     }
 
 
-    @include mobile {
-        top: 290px;
 
-        &__content {
-            padding-block: 10px;
-        }
-    }
 }
 
 @keyframes marquee-scroll {
