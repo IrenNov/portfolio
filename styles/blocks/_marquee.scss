@@ -1,10 +1,10 @@
 .marquee {
     text-align: center;
-    position: absolute;
-    top: -18px;
-    left: 0;
+    // position: absolute;
+    // top: -18px;
+    // left: 0;
     width: 37.29vw;
-    height: 100%;
+    height: 100vh;
     overflow-y: hidden;
 
 
@@ -24,23 +24,48 @@
     }
 
     &__svg {
-
+        padding-inline: 30px 20px;
         display: flex;
         align-items: center;
         white-space: wrap;
         width: 37.29vw;
-        animation: marquee-scroll 10s linear infinite;
+        animation: marquee-scroll 22s linear infinite;
         
-
+        margin-top: -1px;
     }
 
+    &__over {
+        position: absolute;
+        top: 0;
+        width: 37.29vw;
+        height: 100%;
+    }
+
+    &__svg-second {
+        padding-left: 50px;
+        display: flex;
+        flex-direction: column;
+        animation: marquee-scroll-second 18s linear infinite;
+        
+        margin-top: -2px;
+    }
+
+    &__svg-three {
+        padding-inline: 20px 60px;
+        display: flex;
+        flex-direction: column;
+        animation: marquee-scroll 12s linear infinite;
+        
+        margin-top: -1px;
+    }
 
 
     @include mobile {
         top: 290px;
+
         &__content {
             padding-block: 10px;
-        }   
+        }
     }
 }
 
@@ -51,5 +76,15 @@
 
     100% {
         transform: translateY(-100%);
+    }
+}
+
+@keyframes marquee-scroll-second {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }

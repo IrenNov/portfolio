@@ -6,7 +6,8 @@ body {
     line-height: 1.28;
     letter-spacing: -0.05em;
     color: var(--color-light-text);
-    background: var(--color-bg-gradient);
+    background: url(../image/paper-6-3.jpg) repeat, var(--color-bg-gradient);
+    background-blend-mode: multiply;
   }
   
   a,
