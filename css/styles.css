@@ -179,9 +179,10 @@ svg * {
   --color-dark-alt: #203139;
   --color-light: #FFE4B2;
   --color-light-text: #CEB992;
-  --color-dark-rgba: rgba(29, 17, 31, 0.8);
+  --color-dark-rgba: rgba(19, 12, 20, 0.5);
   --color-bg-light: #DFCCA9;
-  --color-bg-gradient: radial-gradient(566.53% 171.01% at 70.96% 49.95%, rgb(68, 64, 77) 0%, rgb(34, 32, 38) 20.68762332201004%, rgb(32, 49, 57) 100%);
+  --color-bg-gradient: radial-gradient(95.57% 89.64% at 65.57% 49.95%, rgb(88, 81, 100) 0%, rgb(45, 41, 54) 29.49712872505188%, rgb(26, 33, 44) 100%);
+  --color-bg-gradient2: radial-gradient(566.53% 171.01% at 70.96% 49.95%, rgb(68, 64, 77) 0%, rgb(34, 32, 38) 20.68762332201004%, rgb(32, 49, 57) 100%);
   --border: 1px solid var(--color-dark);
   --border-radius: 14px;
   --border-radius-small: 7px;
@@ -385,6 +386,7 @@ h4, .h4 {
   align-items: center;
   margin-top: -100px;
   overflow: hidden;
+  min-height: 46.18vw;
 }
 
 .hero {
@@ -494,7 +496,7 @@ h4, .h4 {
 }
 .marquee__over {
   grid-area: stack;
-  filter: drop-shadow(25px 5px 10px var(--color-dark-rgba));
+  filter: drop-shadow(25px 5px 10px var(--color-dark-rgba)) drop-shadow(-5px 5px 18px var(--color-dark-rgba));
 }
 .marquee__svg {
   padding-left: 50px;

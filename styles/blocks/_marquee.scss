@@ -15,7 +15,8 @@
 
     &__over {
         grid-area: stack;
-        filter: drop-shadow(25px 5px 10px var(--color-dark-rgba));
+        filter: drop-shadow(25px 5px 10px var(--color-dark-rgba))
+                 drop-shadow(-5px 5px 18px var(--color-dark-rgba));
     }
 
     &__svg {
@@ -24,7 +25,6 @@
         align-items: center;
         white-space: wrap;
         width: 37.29vw;
-        //filter: drop-shadow(25px 0 25px var(--color-dark-rgba));
         animation: marquee-scroll 40s linear infinite;
 
         margin-top: -1px;
@@ -35,7 +35,6 @@
     &__svg-second {
         display: flex;
         flex-direction: column;
-        // filter: drop-shadow(25px 0 15px var(--color-dark-rgba));
         animation: marquee-scroll-second 18s linear infinite;
 
         margin-top: -2px;
@@ -44,7 +43,6 @@
     &__svg-three {
         display: flex;
         flex-direction: column;
-        // filter: drop-shadow(25px 5px 10px var(--color-dark-rgba));
         animation: marquee-scroll 15s linear infinite;
 
         margin-top: -1px;
