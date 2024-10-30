@@ -43,3 +43,12 @@ body {
   h4, .h4 {
     @include fluid-text(20, 18);
   }
+  
+  
+.loaded_hiding .preloader {
+    opacity: 0;
+}
+    
+.loaded .preloader {
+    display: none;
+}

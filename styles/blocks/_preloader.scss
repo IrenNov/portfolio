@@ -1,0 +1,27 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-dark); /* Цвет фона предзагрузчика */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Обеспечиваем, чтобы предзагрузчик был поверх всех элементов */
+    transition: opacity 1.5s ease 0.5s;
+
+    &__container {
+        position: relative;
+        width: 400px; /* Установите ширину контейнера */
+        height: 400px; /* Установите высоту контейнера */
+        display: grid;
+        grid-template-areas: "stack";
+        align-items: center;
+        justify-items: center;
+    } 
+    &__svg {
+
+            grid-area: stack;
+        }
+}

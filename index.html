@@ -9,6 +9,50 @@
 </head>
 
 <body>
+    <!-- ***** Preloader ***** -->
+	<div class="preloader loader-js">
+        <div class="preloader__container">
+          <svg class="preloader__svg" width="399" height="399" viewBox="0 0 399 399" fill="none" color="#df8622" xmlns="http://www.w3.org/2000/svg">
+			<path d="M383.056 199.782C383.056 301.067 300.825 383.174 199.389 383.174C97.9517 383.174 15.7209 301.067 15.7209 199.782C15.7209 98.498 97.9517 16.3909 199.389 16.3909" stroke="#df8622" stroke-width="30.9456" stroke-linecap="round" >
+				<animateTransform 
+					attributeName="transform" 
+					attributeType="XML" 
+					type="rotate"
+					dur="2s" 
+					from="0 200 200"
+					to="360 200 200" 
+					repeatCount="indefinite"/>
+			</path></svg>
+            <svg class="preloader__svg" width="300" height="299" viewBox="0 0 300 299" fill="none" color="#49807B" xmlns="http://www.w3.org/2000/svg">
+              <path d="M149.982 285.503C225.368 285.503 286.482 224.482 286.482 149.208C286.482 73.9348 225.368 12.9136 149.982 12.9136C74.5947 12.9136 13.4816 73.9348 13.4816 149.208" stroke="#49807B" stroke-width="25.7999" stroke-linecap="round" >
+				<animateTransform 
+					attributeName="transform" 
+					attributeType="XML" 
+					type="rotate"
+					dur="2s" 
+					from="0 150 150"
+					to="-360 150 150"  
+					repeatCount="indefinite"/>
+			</path>  
+            </svg>
+			<svg class="preloader__svg" width="210" height="210" viewBox="0 0 210 210" fill="none" color="#E9C088" xmlns="http://www.w3.org/2000/svg">
+			<path d="M7.53467 105.291C7.53467 159.038 51.793 202.608 106.389 202.608C160.984 202.608 205.242 159.038 205.242 105.291C205.242 51.5441 160.984 7.97363 106.389 7.97363" stroke="#E9C088" stroke-width="14.3989" stroke-linecap="round" >
+				<animateTransform 
+					attributeName="transform" 
+					attributeType="XML" 
+					type="rotate"
+					dur="1s" 
+					from="0 105 105"
+					to="360 105 105" 
+					repeatCount="indefinite"/>
+			</path>
+		</svg>
+        <svg class="preloader__svg" width="136" height="134" viewBox="0 0 136 134" color="#FAF5CB" xmlns="http://www.w3.org/2000/svg">
+            <path d="M135.889 67.2909C135.889 103.991 105.668 133.742 68.3886 133.742C31.1093 133.742 0.88855 103.991 0.88855 67.2909C0.88855 30.5911 31.1093 0.840088 68.3886 0.840088C105.668 0.840088 135.889 30.5911 135.889 67.2909Z" fill="#FAF5CB" />
+          </svg>  
+        </div>
+		
+	</div>
     <header class="header">
         <div class="header__inner">
             <nav class="header__menu hidden-mobile">
@@ -30,7 +74,7 @@
         </div>
 
     </header>
-
+    
     <main class="content">
         <section class="first-section">
             <div class="marquee">
@@ -101,7 +145,7 @@
 
 
     </main>
-
+    <script src="./js/preloader.js"></script>
 </body>
 
 </html>
