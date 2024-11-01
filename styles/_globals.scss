@@ -4,22 +4,20 @@
 }
 
 body {
-  @include fluid-text(28, 16);
-
+  @include fluid-text(32, 14);
+ 
   font-family: var(--font-family-base);
   font-weight: 400;
   line-height: 1.28;
   letter-spacing: -0.05em;
   color: var(--color-light-text);
-  background: url(../image/paper-6-3.jpg) repeat, var(--color-bg-gradient);
-  background-blend-mode: multiply;
+  background-color: var(--color-bg-light);
 }
 
 a,
 button,
 input,
-textarea,
-svg * {
+textarea * {
   transition-duration: var(--transition-duration);
 }
 
@@ -38,12 +36,12 @@ h4 {
 
 h1,
 .h1 {
-  @include fluid-text(64, 43);
+  @include fluid-text(64, 18);
 }
 
 h2,
 .h2 {
-  @include fluid-text(40, 36);
+  @include fluid-text(48, 28);
 }
 
 h3,

@@ -6,10 +6,13 @@
   }
 
   &__main {
-    padding-inline: 60px;
+    padding-inline: 4.17vw;
     display: flex;
     justify-content: end;
-    padding-top: 100px;
+    padding-block: 100px;
+    @include mobile {
+      padding-inline: 0;
+    }
   }
 
   &__body {
@@ -90,10 +93,11 @@
 
   &__description {
     text-transform: lowercase;
-    padding-top: 35px;
+    padding-top: 1.82vw;
   }
 
   &__logo {
+    width: 32.29vw;
     position: relative;
     display: inline-block;
     transition: transform 0.3s ease, filter 0.5s ease;
