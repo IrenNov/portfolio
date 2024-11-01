@@ -8,6 +8,7 @@
         height: auto;
         margin-top: 4.63vh;
         margin-bottom: -6.63vh;
+        margin-left: 10.5vw;
 
         .animated-text {
             font-family: var(--font-family-base);
@@ -69,6 +70,9 @@
             width: 140%;
             z-index: 1;
             transform: scaleY(1.5) translateY(-10%);
+        }
+        @include mobile {
+            margin-inline: 4vw; 
         }
     }
 

@@ -618,6 +618,7 @@ h4,
   height: auto;
   margin-top: 4.63vh;
   margin-bottom: -6.63vh;
+  margin-left: 10.5vw;
 }
 .aboutme__title-svg .animated-text {
   font-family: var(--font-family-base);
@@ -670,6 +671,11 @@ h4,
     width: 140%;
     z-index: 1;
     transform: scaleY(1.5) translateY(-10%);
+  }
+}
+@media (max-width: 767px) {
+  .aboutme__title-svg {
+    margin-inline: 4vw;
   }
 }
 .aboutme__main {
