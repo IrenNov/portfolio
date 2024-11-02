@@ -1,0 +1,16 @@
+.active { 
+    div {
+        background-color: var(--color-light); 
+    }
+    &__line1 {
+        width: 100%;
+        rotate: -45deg;
+    }
+    &__line2 {
+        width: 100%;
+        rotate: 45deg;
+    }
+    &__line3 {
+       width: 0;
+    }
+}

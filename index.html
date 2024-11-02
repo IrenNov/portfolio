@@ -50,7 +50,8 @@
     </div>
     <header class="header all-content">
         <div class="header__inner">
-            <nav class="header__menu hidden-mobile">
+            <nav class="header__menu"  id="mobile-overlay">
+                <h2 class="visually-hidden">Menu</h2>
                 <ul class="header__menu-list">
                     <li class="header__menu-item">
                         <a href="/" class="header__menu-link">About me</a>
@@ -66,6 +67,12 @@
                     </li>
                 </ul>
             </nav>
+            <button class="header__burger-button burger-button visible-mobile" id="btn_mobile-overlay" type="button">
+                <span class="visually-hidden">Open navigation menu</span>
+                <div class="burger-button__line1"></div>
+                <div class="burger-button__line2"></div>
+                <div class="burger-button__line3"></div>
+            </button>
         </div>
 
     </header>
@@ -125,7 +132,7 @@
 
 
                                 <div class="hero__description">
-                                    <p>Frontend developer/ UI designer</p>
+                                    <p>Frontend&nbsp;developer/ UI&nbsp;designer</p>
                                 </div>
 
                             </div>
@@ -138,8 +145,8 @@
 
         </section>
         <section id="aboutme" class="aboutme">
-            
-            <svg  class="aboutme__title-svg container" width="1518" height="114" viewBox="0 0 1518 114" fill="none"
+
+            <svg class="aboutme__title-svg container" width="1518" height="114" viewBox="0 0 1518 114" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <radialGradient id="paint0_radial_264_2194" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
@@ -243,6 +250,7 @@
     </main>
     <script src="./js/preloader.js"></script>
     <script src="./js/observer.js"></script>
+    <script src="./js/mobile-overlay.js"></script>
 </body>
 
 </html>

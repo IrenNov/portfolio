@@ -1,0 +1,73 @@
+.burger-button {
+    margin-right: 2.5vw;
+    @include reset-button;
+    @include square(5.82vw);
+    box-sizing: content-box;
+    padding: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    
+
+
+    div {
+        background-color: var(--color-light);
+        height: 0.65vw;
+        border-radius: 0.4vw;
+        transition: background-color 0.3s ease;
+
+
+
+    }
+
+    &__line1 {
+        width: 60%;
+        margin-top: 1vw;
+    }
+
+    &__line2 {
+        width: 80%;
+
+    }
+
+    &__line3 {
+        width: 100%;
+        margin-bottom: 1vw;
+    }
+
+    &:hover {
+        div {
+       background-color: var(--color-accent-org);     
+        }
+        .burger-button__line2 {
+            animation: rotate 0.5s ease 2 forwards;
+        }
+
+    
+      @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(10deg);
+        }
+
+        50% {
+            transform: rotate(-10deg);
+        }
+
+        75% {
+            transform: rotate(10deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }  
+
+    }
+
+    
+}

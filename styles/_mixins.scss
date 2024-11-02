@@ -69,27 +69,3 @@
   }
 }
 
-@mixin button-size($is-large) {
-  @if $is-large ==true {
-    height: var(--button-height-large);
-    width: 263px;
-    padding: 20px 49px;
-    line-height: 130%;
-    border-radius: var(--border-radius-large);
-    @include mobile-s {
-      width: 100%;
-      height: 47px;
-      padding: 18px 43px;
-    }
-  }
-
-  @else {
-     height: var(--button-height-small);
-    padding: 12px;
-    line-height: 120%;
-    border-radius: var(--border-radius-small);
-    border-color: var(--color-accent-alt);
-    color: var(--color-accent-alt);
-    
-  }
-}

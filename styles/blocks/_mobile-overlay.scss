@@ -1,0 +1,11 @@
+.mobile-overlay {
+    visibility: visible;
+        transform: translateY(0);
+        transition: transform 1s ease-in-out;
+    ul {
+        display: flex;
+        flex-direction: column;
+        @include fluid-text(24, 18);
+    }
+
+}

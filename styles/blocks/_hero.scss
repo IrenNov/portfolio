@@ -94,6 +94,7 @@
   &__description {
     text-transform: lowercase;
     padding-top: 1.82vw;
+    z-index: 1;
   }
 
   &__logo {
@@ -105,6 +106,8 @@
 
   .logo-svg {
     width: 100%;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+    -webkit-box-reflect: below -2.04vw linear-gradient(180deg, rgba(42, 40, 56, 0) 40%, rgba(44, 42, 58, 0.4) 90%);
   }
 
   .hero__logo:hover {
