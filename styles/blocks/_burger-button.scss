@@ -1,7 +1,8 @@
 .burger-button {
     margin-right: 2.5vw;
     @include reset-button;
-    @include square(5.82vw);
+    width: max(36px, 5.82vw);
+    aspect-ratio: 1;
     box-sizing: content-box;
     padding: 0.5vw;
     display: flex;
@@ -13,7 +14,7 @@
 
     div {
         background-color: var(--color-light);
-        height: 0.65vw;
+        height: 0.75vw;
         border-radius: 0.4vw;
         transition: background-color 0.3s ease;
 

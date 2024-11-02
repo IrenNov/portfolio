@@ -26,8 +26,8 @@
       .burger-button__line3 {
         rotate: 45deg;
         background-color: var(--color-light);
-        width: 100%;
-        transform: translate(-1.04vw, -1.04vw);
+        width: 100%; 
+        transform: translate(-9px, -9px);
       }
     }
   }
@@ -47,7 +47,7 @@
 
 
     @include desktop {
-      margin-right: 60px;
+      margin-right: 3.12vw;
     }
 
     @include mobile {
