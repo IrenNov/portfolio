@@ -1,0 +1,52 @@
+.portfolio {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    overflow: hidden;
+
+    &__discription {
+        box-sizing: content-box;
+        width: 19.27vw;
+        padding-right: 10.42vw;
+
+        h2 {
+            line-height: 108%;
+            text-transform: uppercase;
+            z-index: 1;
+        }
+
+        p {
+            padding-top: 1em;
+            line-height: 133%;
+            text-transform: lowercase;
+
+            @include fluid-text(24, 14);
+
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            cursor: pointer;
+
+            &.expanded {
+                display: block;
+                -webkit-line-clamp: unset;
+                overflow: visible;
+            }
+        }
+    }
+    &__svg {
+        transform: scale(1.6);
+        .word-two {
+            transform: translateX(1.3em);
+        }
+        .stroke {
+            stroke-width: 10;
+            stroke: url(#paint0_radial_264_2195);
+        }
+        .fill {
+            fill: url(#imagePattern);
+            stroke: none;
+        } 
+    }
+
+}

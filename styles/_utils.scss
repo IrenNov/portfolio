@@ -21,3 +21,9 @@
       display: none !important;
     }
   }
+
+  .dark {
+    background: url(../image/paper-6-3.jpg) repeat, var(--color-bg-gradient);
+  background-blend-mode: multiply;
+  box-shadow: var(--shadow-inset);
+  }

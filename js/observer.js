@@ -27,4 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (targetSection) {
         observer.observe(targetSection);
     }
+
+    const portfolioSection = document.getElementById('portfolio');
+    if (portfolioSection) {
+        observer.observe(portfolioSection);
+    }
 });

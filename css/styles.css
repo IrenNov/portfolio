@@ -181,6 +181,7 @@ svg * {
   --color-light-text: #CEB992;
   --color-dark-rgba: rgba(19, 12, 20, 0.5);
   --color-bg-light: #DFCCA9;
+  --color-bg-light-rgba: rgba(223, 204, 169, 1);
   --color-accent-org: #CC5A2B;
   --color-bg-gradient: radial-gradient(95.57% 89.64% at 65.57% 49.95%, rgb(88, 81, 100) 0%, rgb(45, 41, 54) 29.49712872505188%, rgb(26, 33, 44) 100%);
   --color-bg-gradient2: radial-gradient(566.53% 171.01% at 70.96% 49.95%, rgb(68, 64, 77) 0%, rgb(34, 32, 38) 20.68762332201004%, rgb(32, 49, 57) 100%);
@@ -191,6 +192,9 @@ svg * {
   --color-white: #fff;
   --color-black: #000;
   --shadow: 0 4px 15px var(--color-dark-rgba);
+  --shadow-inset:
+  inset 0 12px 18px var(--color-dark),
+  inset 0 -12px 18px var(--color-dark);
   --font-family-base: "Space Mono", sans-serif;
   --font-family-second: "Anton", sans-serif;
   --transition-duration: 0.2s;
@@ -230,6 +234,12 @@ svg * {
   .visible-mobile {
     display: none !important;
   }
+}
+
+.dark {
+  background: url(../image/paper-6-3.jpg) repeat, var(--color-bg-gradient);
+  background-blend-mode: multiply;
+  box-shadow: var(--shadow-inset);
 }
 
 * {
@@ -470,8 +480,6 @@ h4,
   margin-top: -100px;
   overflow: hidden;
   height: min(91.2vh, 985px);
-  background: url(../image/paper-6-3.jpg) repeat, var(--color-bg-gradient);
-  background-blend-mode: multiply;
 }
 @media (max-width: 767px) {
   .first-section {
@@ -636,45 +644,20 @@ h4,
   }
 }
 .aboutme {
-  display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 .aboutme__title-svg {
-  width: 100%;
-  height: auto;
   margin-top: 4.63vh;
   margin-bottom: -6.63vh;
 }
-.aboutme__title-svg .animated-text {
-  font-family: var(--font-family-base);
-  font-weight: 700;
-  font-size: clamp(68px, 7.2vw, 104px);
-  letter-spacing: -0.34em;
-  text-transform: lowercase;
-}
 .aboutme__title-svg .stroke {
-  fill: none;
   stroke: url(#paint0_radial_264_2194);
   stroke-width: 12;
-  stroke-linejoin: miter;
-  stroke-linecap: round;
 }
 .aboutme__title-svg .fill {
   fill: #dfcca9;
   stroke: none;
-}
-.aboutme__title-svg .animate {
-  stroke-dasharray: 400;
-  stroke-dashoffset: 400;
-}
-.aboutme__title-svg .animate.in-view {
-  animation: draw 2s forwards;
-  animation-fill-mode: forwards;
-}
-.aboutme__title-svg .animate.out-of-view {
-  animation: drawdown 2s forwards;
-  animation-fill-mode: forwards;
 }
 .aboutme__title-svg .word-and {
   transform: translateX(5.1em);
@@ -682,20 +665,9 @@ h4,
 .aboutme__title-svg .word-th {
   transform: translateX(7em);
 }
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes drawdown {
-  to {
-    stroke-dashoffset: 400;
-  }
-}
 @media (max-width: 767px) {
   .aboutme__title-svg {
     width: 140%;
-    z-index: 1;
     transform: scaleY(1.5) translateY(-10%);
   }
 }
@@ -723,7 +695,6 @@ h4,
   width: 29.14vw;
   color: var(--color-dark);
   padding-top: 4.58vh;
-  opacity: 0.8;
 }
 @media (max-width: 767px) {
   .aboutme__content {
@@ -734,6 +705,7 @@ h4,
 .aboutme__content h2 {
   line-height: 108%;
   text-transform: uppercase;
+  z-index: 1;
 }
 .aboutme__content p {
   padding-top: 1em;
@@ -748,7 +720,13 @@ h4,
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    cursor: pointer;
   }
+}
+.aboutme__content p.expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
 }
 
 .burger-button {
@@ -815,4 +793,89 @@ h4,
   display: flex;
   flex-direction: column;
   font-size: clamp(18px, 1.25vw, 24px);
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  overflow: hidden;
+}
+.portfolio__discription {
+  box-sizing: content-box;
+  width: 19.27vw;
+  padding-right: 10.42vw;
+}
+.portfolio__discription h2 {
+  line-height: 108%;
+  text-transform: uppercase;
+  z-index: 1;
+}
+.portfolio__discription p {
+  padding-top: 1em;
+  line-height: 133%;
+  text-transform: lowercase;
+  font-size: clamp(14px, 1.25vw, 24px);
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  cursor: pointer;
+}
+.portfolio__discription p.expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+.portfolio__svg {
+  transform: scale(1.6);
+}
+.portfolio__svg .word-two {
+  transform: translateX(1.3em);
+}
+.portfolio__svg .stroke {
+  stroke-width: 10;
+  stroke: url(#paint0_radial_264_2195);
+}
+.portfolio__svg .fill {
+  fill: url(#imagePattern);
+  stroke: none;
+}
+
+.stroke-svg {
+  width: 100%;
+  height: auto;
+}
+.stroke-svg .animated-text {
+  font-family: var(--font-family-base);
+  font-weight: 700;
+  font-size: clamp(68px, 7.2vw, 104px);
+  letter-spacing: -0.34em;
+  text-transform: lowercase;
+}
+.stroke-svg .stroke {
+  fill: none;
+  stroke-linejoin: miter;
+  stroke-linecap: round;
+}
+.stroke-svg .animate {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+}
+.stroke-svg .animate.in-view {
+  animation: draw 2s forwards;
+  animation-fill-mode: forwards;
+}
+.stroke-svg .animate.out-of-view {
+  animation: drawdown 2s forwards;
+  animation-fill-mode: forwards;
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes drawdown {
+  to {
+    stroke-dashoffset: 400;
+  }
 }/*# sourceMappingURL=styles.css.map */

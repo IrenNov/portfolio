@@ -6,8 +6,7 @@
     margin-top: -100px;
     overflow: hidden;
     height: min(91.2vh, 985px);
-    background: url(../image/paper-6-3.jpg) repeat, var(--color-bg-gradient);
-  background-blend-mode: multiply;
+    
 
     @include mobile {
         height: clamp(505px, 58.88vh, 665px);
