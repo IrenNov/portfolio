@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, {
         root: null, // viewport
-        threshold: 0.5 
+        threshold: 0.6 
     });
 
     // Наблюдаем за секцией с id 'aboutme'

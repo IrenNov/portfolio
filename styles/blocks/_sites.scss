@@ -3,7 +3,7 @@
     position: relative;
     @include mobile {
         order: 2;
-        margin-top: -4vw;
+        //margin-top: -4vw;
     }
 
     &__list {
@@ -16,6 +16,9 @@
 
         &::-webkit-scrollbar {
             display: none;
+        }
+        @include mobile {
+            margin-top: 10.67vw;
         }
     }
 
@@ -34,9 +37,12 @@
             margin: auto;
             object-fit: cover;
             filter: drop-shadow(0.1vw 1.74vw 10px var(--color-dark));
-            -webkit-box-reflect: below -7.34vw linear-gradient(180deg, rgba(42, 40, 56, 0) 88%, rgb(44, 42, 58) 97%);
+            -webkit-box-reflect: below -6.34vw linear-gradient(180deg, rgba(42, 40, 56, 0) 88%, rgb(44, 42, 58) 97%);
             @include mobile {
                 -webkit-box-reflect: below -12.74vw linear-gradient(180deg, rgba(42, 40, 56, 0) 88%, rgb(44, 42, 58) 97%);
+            }
+            @include mobile {
+                height: 90%;
             }
         }
     }
@@ -49,7 +55,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: max(50px, 7.04vw);
+        width: max(60px, 7.04vw);
         z-index: 1;
         aspect-ratio: 1;
         padding: 1vw;
@@ -68,7 +74,8 @@
                 #673543) border-box;
         animation: spin 2.5s infinite linear;
         @include mobile {
-            border-width: 4px;
+            border-width: 3px;
+            top: 0;
         }
 
         &:hover {
