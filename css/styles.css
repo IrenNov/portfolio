@@ -917,7 +917,6 @@ h4,
 .sites__item {
   position: relative;
   max-width: 100%;
-  /* Используем min-width для слайдов */
   flex-shrink: 0;
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -925,9 +924,9 @@ h4,
 .sites__item img {
   width: 100%;
   height: auto;
-  /* Сохраняет пропорции изображения */
   -o-object-fit: cover;
      object-fit: cover;
+  filter: drop-shadow(15px 10px 6px var(--color-dark));
 }
 .sites__link {
   overflow: hidden;
