@@ -1,8 +1,6 @@
 .sites {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+    
+    position: relative;
     @include mobile {
         order: 2;
         margin-top: -4vw;
@@ -25,13 +23,15 @@
     &__item {
         position: relative;
         width: 100%;
+        max-height: 98vh;
         flex-shrink: 0;
         scroll-snap-align: start;
         scroll-snap-stop: always;
 
         img {
-            width: 100%;
-            height: auto;
+            width: auto;
+            height: 100%;
+            margin: auto;
             object-fit: cover;
             filter: drop-shadow(0.1vw 1.74vw 10px var(--color-dark));
             -webkit-box-reflect: below -7.34vw linear-gradient(180deg, rgba(42, 40, 56, 0) 88%, rgb(44, 42, 58) 97%);
@@ -49,7 +49,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: max(45px, 7.04vw);
+        width: max(50px, 7.04vw);
         z-index: 1;
         aspect-ratio: 1;
         padding: 1vw;
@@ -67,6 +67,9 @@
                 #DF8622 70%,
                 #673543) border-box;
         animation: spin 2.5s infinite linear;
+        @include mobile {
+            border-width: 4px;
+        }
 
         &:hover {
             transform: scale(1.2);
@@ -92,6 +95,9 @@
 
 
     &__dots {
+        position: absolute;
+        top: 96%;
+        left: 50%;
         padding: 0.6vw;
         transform: translateX(-50%);
         display: flex;

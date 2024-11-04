@@ -3,7 +3,7 @@
     grid-template-columns: 1fr auto;
     overflow: hidden;
     align-items: center;
-    padding-bottom: 3vw;
+    padding-bottom: 1vw;
 
     @include mobile {
         display: flex;
