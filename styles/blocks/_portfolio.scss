@@ -1,24 +1,36 @@
 .portfolio {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr auto;
     overflow: hidden;
+    align-items: center;
+    padding-bottom: 3vw;
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     &__discription {
-        box-sizing: content-box;
-        width: 19.27vw;
-        padding-right: 10.42vw;
 
+        box-sizing: content-box;
+        width:  max(250px, 21.07vw);
+        padding-right: 10.42vw;
+        overflow-x: visible;
+        @include mobile {
+            order: 1;
+            padding: 0;
+        }
         h2 {
             line-height: 108%;
             text-transform: uppercase;
-            z-index: 1;
+            padding-bottom: 2vw;
         }
 
         p {
-            padding-top: 1em;
+            
             line-height: 133%;
             text-transform: lowercase;
-
             @include fluid-text(24, 14);
 
             display: -webkit-box;
@@ -30,12 +42,13 @@
             &.expanded {
                 display: block;
                 -webkit-line-clamp: unset;
-                overflow: visible;
+                overflow: scroll;
+            height: max(93px, 11.85vw);
             }
         }
     }
     &__svg {
-        transform: scale(1.6);
+       margin-bottom: -1.5vh;
         .word-two {
             transform: translateX(1.3em);
         }

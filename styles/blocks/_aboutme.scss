@@ -1,50 +1,21 @@
 .aboutme {
     flex-direction: column;
     overflow: hidden;
-    
+
 
     &__title-svg {
-        // width: 100%;
-        // height: auto;
         margin-top: 4.63vh;
         margin-bottom: -6.63vh;
 
-        // .animated-text {
-        //     font-family: var(--font-family-base);
-        //     font-weight: 700;
-        //     font-size: clamp(68px, 7.2vw, 104px);
-        //     letter-spacing: -0.34em;
-        //     text-transform: lowercase;
-            
-        // }
-
-         .stroke {
-        //     fill: none;
-             stroke: url(#paint0_radial_264_2194);
-             stroke-width: 12;
-        //     stroke-linejoin: miter;
-        //     stroke-linecap: round;
-         }
+        .stroke {
+            stroke: url(#paint0_radial_264_2194);
+            stroke-width: 12;
+        }
 
         .fill {
             fill: #dfcca9;
             stroke: none;
         }
-
-        // .animate {
-        //     stroke-dasharray: 400;
-        //     stroke-dashoffset: 400;
-        // }
-
-        // .animate.in-view {
-        //     animation: draw 2s forwards;
-        //     animation-fill-mode: forwards;
-        // }
-
-        // .animate.out-of-view {
-        //     animation: drawdown 2s forwards;
-        //     animation-fill-mode: forwards;
-        // }
 
         .word-and {
             transform: translateX(5.1em);
@@ -54,31 +25,15 @@
             transform: translateX(7em);
         }
 
-        // @keyframes draw {
-        //     to {
-        //         stroke-dashoffset: 0;
-        //     }
-        // }
-
-        // @keyframes drawdown {
-        //     to {
-        //         stroke-dashoffset: 400;
-        //     }
-        // }
         @include mobile {
             width: 140%;
-            //z-index: 1;
             transform: scaleY(1.5) translateY(-10%);
         }
-        @include mobile {
-            margin-inline: 4vw; 
-        }
+
     }
 
     &__main {
-      //  width: 100%;
         display: flex;
-        align-items: center;
         justify-content: space-between;
 
         @include mobile {
@@ -99,34 +54,37 @@
 
         @include mobile {
             width: 100%;
-            margin-bottom: 3em;
+            margin-bottom: 5vw;
         }
 
         h2 {
             line-height: 108%;
             text-transform: uppercase;
             z-index: 1;
+            padding-bottom: 2vw;
         }
 
         p {
-            padding-top: 1em;
             line-height: 133%;
             text-transform: lowercase;
             color: var(--color-dark-rgba);
             @include fluid-text(24, 14);
-            @include mobile {
+
+            @include tablet {
                 display: -webkit-box;
                 -webkit-line-clamp: 3;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 cursor: pointer;
             }
+
             &.expanded {
-                display: block; 
+                display: block;
                 -webkit-line-clamp: unset;
-                overflow: visible;
-              }
+                overflow: scroll;
+                height: 55px;
+            }
         }
-    } 
-       
+    }
+
 }

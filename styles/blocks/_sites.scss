@@ -1,0 +1,142 @@
+.sites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mobile {
+        order: 2;
+        margin-top: -8vw;
+    }
+
+    &__list {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+
+    &__item {
+        position: relative;
+        max-width: 100%;
+        /* Используем min-width для слайдов */
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+
+        img {
+            width: 100%;
+            height: auto;
+            /* Сохраняет пропорции изображения */
+            object-fit: cover;
+        }
+    }
+
+    &__link {
+        overflow: hidden;
+        position: absolute;
+        top: max(50px, 10vw);
+        right: max(50px, 10vw);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: max(45px, 7.04vw);;
+        aspect-ratio: 1;
+        padding: 1vw;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 0.45vw solid transparent;
+        transition: 0.2s ease;
+        background:
+            url(../image/pattern.png) padding-box,
+            conic-gradient(from var(--bg-angle),
+                #673543,
+                #DAB27D 10%,
+                #9DD9CB 30%,
+                #3B8381 50%,
+                #DF8622 70%,
+                #673543) border-box;
+        animation: spin 2.5s infinite linear;
+
+        &:hover {
+            transform: scale(1.2);
+            border: 0.45vw solid #DF8622;
+
+            .stroke-path {
+                stroke: #DF8622;
+            }
+        }
+
+        .svg {
+            width: 80%;
+            height: auto;
+            animation: fly 3.5s 2s infinite ease-out;
+        }
+
+        .stroke-path {
+            stroke-width: max(5px, 0.3vw);
+            stroke: url(#paint0_radial_264_2196);
+        }
+
+    }
+
+
+    &__dots {
+        padding: 0.6vw;
+        transform: translateX(-50%);
+        display: flex;
+        gap: max(7px, 0.8vw);
+    }
+
+    &__dot {
+        box-sizing: border-box;
+        width: max(6px, 0.7vw);
+        aspect-ratio: 1;
+        background-color: var(--color-bg-light);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &--active {
+            background-color: var(--color-accent-org);
+        }
+    }
+}
+
+@keyframes spin {
+    to {
+        --bg-angle: 360deg;
+    }
+}
+
+@property --bg-angle {
+    inherits: false;
+    initial-value: 0deg;
+    syntax: "<angle>";
+}
+
+@keyframes fly {
+    0% {
+        transform: translate(-5vw, 5vw);
+    }
+
+    10% {
+        transform: translate(0);
+    }
+
+    80% {
+        transform: translate(0);
+    }
+
+    100% {
+
+        transform: translate(5vw, -5vw);
+
+    }
+}

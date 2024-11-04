@@ -2,7 +2,7 @@
     margin-inline: auto;
     height: auto;
     &__section {
-      width: 79.17vw;  
+      width: max(250px, 79.17vw);  
   }
   }
   
