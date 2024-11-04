@@ -48,7 +48,9 @@
         }
     }
     &__svg {
-       margin-bottom: -1.5vh;
+        position: relative;
+       margin-bottom: -1vh;
+       z-index: 1;
         .word-two {
             transform: translateX(1.3em);
         }
@@ -59,6 +61,15 @@
         .fill {
             fill: url(#imagePattern);
             stroke: none;
+            
+            .in-view {
+                opacity: 1;
+                transition: opacity 0.3s cubic-bezier(0.32, 0.15, 0.04, 1.03);
+            }
+            .out-of-view {
+                opacity: 0;
+                transition: opacity 10s cubic-bezier(0.32, 0.15, 0.04, 1.03);
+            }
         } 
     }
     
