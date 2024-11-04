@@ -72,7 +72,7 @@
 
             @include tablet {
                 display: -webkit-box;
-                -webkit-line-clamp: 3;
+                -webkit-line-clamp: 5;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 cursor: pointer;
@@ -82,9 +82,18 @@
                 display: block;
                 -webkit-line-clamp: unset;
                 overflow: scroll;
-                height: 55px;
+                height: max(93px, 11.85vw);
             }
         }
+    }
+    ::-webkit-scrollbar-track {
+        background-color: var(--color-light-text); /* Цвет фона трека */
+       
+    }
+    
+    /* Стили для бегунка */
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--color-dark-rgba);  
     }
 
 }

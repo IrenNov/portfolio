@@ -242,6 +242,9 @@ svg * {
   background-blend-mode: multiply;
   box-shadow: var(--shadow-inset);
 }
+.dark ::-webkit-scrollbar-track {
+  background-color: var(--color-dark-rgba);
+}
 
 * {
   transition: opacity 3s ease 5s;
@@ -647,6 +650,7 @@ h4,
 .aboutme {
   flex-direction: column;
   overflow: hidden;
+  /* Стили для бегунка */
 }
 .aboutme__title-svg {
   margin-top: 4.63vh;
@@ -712,7 +716,7 @@ h4,
 @media (max-width: 1023px) {
   .aboutme__content p {
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     overflow: hidden;
     cursor: pointer;
@@ -722,7 +726,13 @@ h4,
   display: block;
   -webkit-line-clamp: unset;
   overflow: scroll;
-  height: 55px;
+  height: max(93px, 11.85vw);
+}
+.aboutme ::-webkit-scrollbar-track {
+  background-color: var(--color-light-text); /* Цвет фона трека */
+}
+.aboutme ::-webkit-scrollbar-thumb {
+  background-color: var(--color-dark-rgba);
 }
 
 .burger-button {
@@ -937,6 +947,7 @@ h4,
   align-items: center;
   justify-content: center;
   width: max(45px, 7.04vw);
+  z-index: 1;
   aspect-ratio: 1;
   padding: 1vw;
   border-radius: 50%;
@@ -1004,4 +1015,28 @@ h4,
   100% {
     transform: translate(5vw, -5vw);
   }
+}
+::-webkit-scrollbar {
+  width: 0.42vw; /* Ширина вертикальной полосы */
+  height: 0; /* Высота горизонтальной полосы */
+}
+
+/* Стили для "трека" — фона полосы прокрутки */
+::-webkit-scrollbar-track {
+  background-color: var(--color-dark); /* Цвет фона трека */
+  opacity: 0.5;
+  border-radius: 0.22vw;
+}
+
+/* Стили для бегунка */
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-light-text); /* Цвет бегунка */
+  opacity: 0.5;
+  border-radius: 0.22vw; /* Скругленные края бегунка */
+  border: none; /* Цвет обводки бегунка */
+}
+
+/* При наведении на бегунок */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #cb7c5a; /* Темнее при наведении */
 }/*# sourceMappingURL=styles.css.map */
