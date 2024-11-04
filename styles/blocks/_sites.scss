@@ -5,7 +5,7 @@
 
     @include mobile {
         order: 2;
-        margin-top: -8vw;
+        margin-top: -4vw;
     }
 
     &__list {
@@ -24,7 +24,7 @@
 
     &__item {
         position: relative;
-        max-width: 100%;
+        width: 100%;
         flex-shrink: 0;
         scroll-snap-align: start;
         scroll-snap-stop: always;
@@ -33,16 +33,19 @@
             width: 100%;
             height: auto;
             object-fit: cover;
-            filter: drop-shadow(15px 10px 6px var(--color-dark));
-           
+            filter: drop-shadow(0.1vw 1.74vw 10px var(--color-dark));
+            -webkit-box-reflect: below -7.34vw linear-gradient(180deg, rgba(42, 40, 56, 0) 88%, rgb(44, 42, 58) 97%);
+            @include mobile {
+                -webkit-box-reflect: below -12.74vw linear-gradient(180deg, rgba(42, 40, 56, 0) 88%, rgb(44, 42, 58) 97%);
+            }
         }
     }
 
     &__link {
         overflow: hidden;
         position: absolute;
-        top: max(50px, 10vw);
-        right: max(50px, 10vw);
+        top: 7vw;
+        right: max(35px, 4vw);
         display: flex;
         align-items: center;
         justify-content: center;
