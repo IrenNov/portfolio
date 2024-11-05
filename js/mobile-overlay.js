@@ -28,3 +28,8 @@ document.addEventListener('click', (event) => {
         menuButton.setAttribute('aria-expanded', 'false');
     }
 });
+
+menuButton.addEventListener('touchstart', () => {
+    menuButton.classList.toggle('active');
+});
+

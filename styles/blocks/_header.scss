@@ -73,16 +73,25 @@
       align-items: center;
       height: 48px;
       transition: transform 0.2s cubic-bezier(0.34, -0.67, 0.35, 0.81);
-    }
 
-    &-link:hover {
-      transform: translateY(-10px);
+      @include hover {
+        transform: translateY(-10px);
 
-      &::after {
-        width: 100%;
+        &::after {
+          width: 100%;
+        }
       }
-
     }
+
+
+    // &-link:hover {
+    //   transform: translateY(-10px);
+
+    //   &::after {
+    //     width: 100%;
+    //   }
+
+    // }
 
     &-link::after {
       content: '';

@@ -4,7 +4,8 @@
     overflow: hidden;
     align-items: center;
     padding-bottom: 1vw;
-
+    position: relative;
+    
     @include mobile {
         display: flex;
         flex-direction: column;
