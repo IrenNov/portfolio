@@ -13,8 +13,8 @@ const observer = new IntersectionObserver((entries) => {
                 const { offsetX: x, offsetY: y } = event;
         
                 const rotateY = ((y / height) - 0.5) * 10; // Настройте угол поворота по оси X
-                const rotateX = ((x / width) - 0.5) * -90; // Настройте угол поворота по оси Y
-                const scale = 1.1;
+                const rotateX = ((x / width) - 0.5) * 90; // Настройте угол поворота по оси Y
+                const scale = 1.3;
                 wrapper.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${scale})`;
             });
         

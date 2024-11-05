@@ -1,6 +1,6 @@
 .sites {
     overflow-y: visible;
-
+    
     @include mobile {
         order: 2;
         //margin-top: -4vw;
@@ -12,6 +12,7 @@
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
+        margin-right: 10px;
 
         &::-webkit-scrollbar {
             display: none;
@@ -67,7 +68,7 @@
         overflow: hidden;
         position: absolute;
         top: 7vw;
-        right: max(35px, 4vw);
+        right: max(45px, 4vw);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -117,7 +118,10 @@
     }
 
 
-    &__dots {
+    
+}
+.sites__dots {
+        z-index: 1;
         position: absolute;
         top: 96%;
         left: 50%;
@@ -127,7 +131,7 @@
         gap: max(7px, 0.8vw);
     }
 
-    &__dot {
+    .sites__dot {
         box-sizing: border-box;
         width: max(6px, 0.7vw);
         aspect-ratio: 1;
@@ -140,8 +144,6 @@
             background-color: var(--color-accent-org);
         }
     }
-}
-
 @keyframes spin {
     to {
         --bg-angle: 360deg;

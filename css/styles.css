@@ -195,6 +195,8 @@ svg * {
   --shadow-inset:
   inset 0 12px 18px var(--color-dark),
   inset 0 -12px 18px var(--color-dark);
+  --shadow-inset-vert:
+  inset 12px 0 8px var(--color-dark);
   --font-family-base: "Space Mono", sans-serif;
   --font-family-second: "Anton", sans-serif;
   --transition-duration: 0.2s;
@@ -245,6 +247,17 @@ svg * {
 }
 .dark ::-webkit-scrollbar-track {
   background-color: var(--color-dark-rgba);
+}
+
+.blur::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  box-shadow: var(--shadow-inset-vert);
+  z-index: 1;
+  left: 0;
 }
 
 * {
@@ -990,6 +1003,7 @@ h4,
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  margin-right: 10px;
   scroll-behavior: smooth;
 }
 .sites__list::-webkit-scrollbar {
@@ -1037,7 +1051,7 @@ h4,
   overflow: hidden;
   position: absolute;
   top: 7vw;
-  right: max(35px, 4vw);
+  right: max(45px, 4vw);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1073,7 +1087,9 @@ h4,
   stroke-width: max(5px, 0.3vw);
   stroke: url(#paint0_radial_264_2196);
 }
+
 .sites__dots {
+  z-index: 1;
   position: absolute;
   top: 96%;
   left: 50%;
@@ -1082,6 +1098,7 @@ h4,
   display: flex;
   gap: max(7px, 0.8vw);
 }
+
 .sites__dot {
   box-sizing: border-box;
   width: max(6px, 0.7vw);

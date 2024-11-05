@@ -22,6 +22,8 @@
     --shadow-inset: 
     inset 0 12px 18px var(--color-dark),
     inset 0 -12px 18px var(--color-dark);
+    --shadow-inset-vert: 
+    inset 12px 0 8px var(--color-dark);
 
     --font-family-base: "Space Mono", sans-serif;
     --font-family-second: "Anton", sans-serif;
