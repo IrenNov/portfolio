@@ -1,4 +1,4 @@
-const sliderItems = document.querySelectorAll('.sites__item');
+const sliderItems = document.querySelectorAll('.rotate-hover');
 const observerOptions = {
   root: null, // Вся область просмотра
   threshold: 0.6, // Процент видимости элемента (90%)

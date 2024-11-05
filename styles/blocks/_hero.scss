@@ -100,10 +100,16 @@
     z-index: 1;
     overflow: hidden;
 
-    .transition {
+     
+      .transition.in-view {
       transform: translateX(100%);
-      animation: slide 2s 5s ease forwards;
-    }
+      animation: slide 2s cubic-bezier(0.6,-0.28,0.74,0.05) forwards;  
+      }
+      .transition.out-of-view {
+        animation: slide-out 2s cubic-bezier(0.6,-0.28,0.74,0.05) forwards;
+      }
+      
+    
 
   }
 
@@ -138,5 +144,14 @@
 
   to {
     transform: translateX(0);
+  }
+}
+@keyframes slide-out {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
   }
 }

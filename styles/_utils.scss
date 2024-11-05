@@ -26,6 +26,7 @@
     background: url(../image/paper-6-3.jpg) repeat, var(--color-bg-gradient);
   background-blend-mode: multiply;
   box-shadow: var(--shadow-inset);
+  background-attachment: fixed;
   ::-webkit-scrollbar-track {
     background-color: var(--color-dark-rgba); 
   }
