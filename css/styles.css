@@ -585,14 +585,17 @@ h4,
   text-transform: lowercase;
   padding-top: 1.82vw;
   z-index: 1;
-  overflow: hidden;
+  overflow: visible;
+}
+.hero__description p {
+  margin-bottom: 0;
 }
 .hero__description .transition.in-view {
-  transform: translateX(100%);
-  animation: slide 2s cubic-bezier(0.6, -0.28, 0.74, 0.05) forwards;
+  transform: translateY(250%);
+  animation: slide 1s 2s ease-in forwards;
 }
 .hero__description .transition.out-of-view {
-  animation: slide-out 2s cubic-bezier(0.6, -0.28, 0.74, 0.05) forwards;
+  animation: slide-out 2s ease-out forwards;
 }
 .hero__logo {
   width: 32.29vw;
@@ -616,18 +619,18 @@ h4,
 
 @keyframes slide {
   from {
-    transform: translateX(100%);
+    transform: translateY(250%);
   }
   to {
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 @keyframes slide-out {
   from {
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
   to {
-    transform: translateX(100%);
+    transform: translateY(250%);
   }
 }
 .marquee {
@@ -1008,6 +1011,7 @@ h4,
   scroll-snap-stop: always;
   perspective: 10000px;
   overflow-x: auto;
+  overflow-y: hidden;
   transform: scale(0.9);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
