@@ -35,16 +35,6 @@
 
 }
 
-.blur::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 50px;
-    height: 100%;
-    box-shadow: var(--shadow-inset-vert);
-    z-index: 1;
-    left: 0;
-  }
 
   
 

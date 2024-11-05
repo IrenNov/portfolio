@@ -1,7 +1,8 @@
 .aboutme {
     overflow: hidden;
+    background-color: var(--color-bg-light);
     @include mobile {
-        margin-top: 9.67vw;
+        padding-top: 9.67vw;
     }
 
     &__title-svg {

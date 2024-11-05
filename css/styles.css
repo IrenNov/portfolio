@@ -177,6 +177,7 @@ svg * {
 :root {
   --color-dark: #1D111F;
   --color-dark-alt: #203139;
+  --color-gray: #2D2B3B;
   --color-light: #FFE4B2;
   --color-light-text: #CEB992;
   --color-dark-rgba: rgba(19, 12, 20, 0.5);
@@ -249,17 +250,6 @@ svg * {
   background-color: var(--color-dark-rgba);
 }
 
-.blur::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 50px;
-  height: 100%;
-  box-shadow: var(--shadow-inset-vert);
-  z-index: 1;
-  left: 0;
-}
-
 * {
   transition: opacity 3s ease 5s;
 }
@@ -271,7 +261,7 @@ body {
   line-height: 1.28;
   letter-spacing: -0.05em;
   color: var(--color-light-text);
-  background-color: var(--color-bg-light);
+  background-color: var(--color-gray);
 }
 
 a,
@@ -626,7 +616,6 @@ h4,
   transform-style: preserve-3d;
 }
 .hero .hero__logo:hover {
-  transform: scale(1.1);
   filter: drop-shadow(-32px 29px 76px rgba(255, 252, 229, 0.7));
 }
 
@@ -704,11 +693,12 @@ h4,
 }
 .aboutme {
   overflow: hidden;
+  background-color: var(--color-bg-light);
   /* Стили для бегунка */
 }
 @media (max-width: 767px) {
   .aboutme {
-    margin-top: 9.67vw;
+    padding-top: 9.67vw;
   }
 }
 .aboutme__title-svg {
@@ -1015,7 +1005,7 @@ h4,
   }
 }
 .sites__item.dimmed {
-  opacity: 0.5;
+  opacity: 0.4;
 }
 .sites__item {
   width: 100%;
