@@ -1,4 +1,5 @@
 .aboutme {
+   position: relative;
     overflow: hidden;
     background-color: var(--color-bg-light);
     @include mobile {
@@ -6,6 +7,7 @@
     }
 
     &__title-svg {
+        
         margin-top: 4.63vh;
         margin-bottom: -6.63vh;
 
@@ -108,5 +110,5 @@
     ::-webkit-scrollbar-thumb {
         background-color: var(--color-dark-rgba);  
     }
-
+   
 }
