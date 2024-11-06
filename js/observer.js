@@ -32,4 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (portfolioSection) {
         observer.observe(portfolioSection);
     }
+
+    const skillsSection = document.getElementById('skills');
+    if (skillsSection) {
+        observer.observe(skillsSection);
+    }
 });

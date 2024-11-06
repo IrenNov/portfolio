@@ -114,7 +114,7 @@
     }
 
     .transition.in-view {
-      transform: translateY(250%);
+      transform: translateY(calc(100% + 9.26vh));
       animation: slide 1s 2s ease-in forwards;
     }
 
@@ -154,7 +154,7 @@
 
 @keyframes slide {
   from {
-    transform: translateY(250%);
+    transform: translateY(calc(100% + 9.26vh));
   }
 
   to {
@@ -168,6 +168,6 @@
   }
 
   to {
-    transform: translateY(250%);
+    transform: translateY(calc(100% + 9.26vh));
   }
 }

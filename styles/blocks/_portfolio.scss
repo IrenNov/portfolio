@@ -1,15 +1,15 @@
 .portfolio {
     display: grid;
     grid-template-columns: 1fr auto;
+    grid-template-rows: repeat(auto-fit, 90%);
     overflow: hidden;
     align-items: center;
-    padding-bottom: 1vw;
-    position: relative;
+    justify-items: center;
     
     @include mobile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fit, 47%);
+        justify-content: center;
     }
 
     &__discription {
@@ -20,7 +20,6 @@
         overflow-x: visible;
         @include mobile {
             order: 1;
-            margin-top: 9.67vw;
         }
         h2 {
             line-height: 108%;

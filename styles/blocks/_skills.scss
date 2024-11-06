@@ -1,0 +1,35 @@
+.skills {
+    overflow: hidden;
+    background-color: var(--color-bg-light);
+    height: 100%;
+    position: relative;
+    height: 35.83vw;
+
+    &__title {
+        width: 110%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .fill-text {
+            font-weight: 700;
+            font-size: 680px;
+            line-height: 80%;
+            letter-spacing: -0.14em;
+            text-transform: uppercase;
+            fill: url(#paint0_radial_508_32);
+            stroke: none;
+            .animate.in-view {
+                opacity: 1;
+                transition: opacity 2s cubic-bezier(0.32, 0.15, 0.04, 1.03);
+            }
+            .animate.out-of-view {
+                opacity: 0;
+                transition: opacity 2s cubic-bezier(0.32, 0.15, 0.04, 1.03);
+            }
+        }
+    }
+
+}
