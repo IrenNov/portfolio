@@ -83,16 +83,6 @@
       }
     }
 
-
-    // &-link:hover {
-    //   transform: translateY(-10px);
-
-    //   &::after {
-    //     width: 100%;
-    //   }
-
-    // }
-
     &-link::after {
       content: '';
       position: absolute;
