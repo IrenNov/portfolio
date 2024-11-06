@@ -11,10 +11,10 @@
     }
 
     &__list {
-        
+
         white-space: nowrap;
-        animation: marquee-scroll 8s linear infinite;
-    
+        animation: marquee-line 25s linear infinite;
+
         width: calc(130%);
     }
 
@@ -25,10 +25,10 @@
     }
 
     &__first {
-        
+
         display: flex;
         gap: 8vw;
-        
+
     }
 
     &__item {
@@ -39,14 +39,21 @@
         aspect-ratio: 1;
         justify-content: center;
         flex: none;
-
     }
 
     &__img {
         height: 100%;
+        transform: rotateY(0deg);
+        transform-style: preserve-3d;
+        transition: transform 3s ease-out;
+    }
+
+    &__img:hover {
+        transform: rotateY(180deg);
     }
 }
-@keyframes marquee-scroll {
+
+@keyframes marquee-line {
     0% {
         transform: translateX(10%);
     }

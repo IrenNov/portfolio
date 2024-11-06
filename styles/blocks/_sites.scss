@@ -1,5 +1,8 @@
 .sites {
+    height: 90%;
     overflow-y: visible;
+    align-content: end;
+    padding-bottom: 5%;
     @include mobile {
         order: 2;
     }
@@ -32,7 +35,7 @@
         overflow-y: hidden;
         transform: scale(0.9);
         transition: transform 0.3s ease, opacity 0.3s ease;
-
+        
 
         img {
             width: auto;
@@ -107,11 +110,11 @@
     }
 }
 .sites__dots {
-        z-index: 1;
+        z-index: 3;
         padding: 0.6vw;
         transform: translateX(-50%);
         display: flex;
-        gap: max(7px, 0.8vw);
+        gap: max(8px, 0.95vw);
         @include mobile {
             order: 3;
         }
@@ -119,7 +122,7 @@
 
     .sites__dot {
         box-sizing: border-box;
-        width: max(6px, 0.7vw);
+        width: max(7px, 0.9vw);
         aspect-ratio: 1;
         background-color: var(--color-bg-light);
         border-radius: 50%;

@@ -246,14 +246,14 @@ svg * {
   background-blend-mode: multiply;
   box-shadow: var(--shadow-inset);
   background-attachment: fixed;
-  height: min(91.2vh, 850px);
+  height: min(91.2vh, 950px);
 }
 .dark ::-webkit-scrollbar-track {
   background-color: var(--color-dark-rgba);
 }
 @media (max-width: 1023px) {
   .dark {
-    height: min(91.2vh, 650px);
+    height: min(91.2vh, 550px);
   }
 }
 
@@ -1001,7 +1001,10 @@ h4,
 }
 
 .sites {
+  height: 90%;
   overflow-y: visible;
+  align-content: end;
+  padding-bottom: 5%;
 }
 @media (max-width: 767px) {
   .sites {
@@ -1095,11 +1098,11 @@ h4,
 }
 
 .sites__dots {
-  z-index: 1;
+  z-index: 3;
   padding: 0.6vw;
   transform: translateX(-50%);
   display: flex;
-  gap: max(7px, 0.8vw);
+  gap: max(8px, 0.95vw);
 }
 @media (max-width: 767px) {
   .sites__dots {
@@ -1109,7 +1112,7 @@ h4,
 
 .sites__dot {
   box-sizing: border-box;
-  width: max(6px, 0.7vw);
+  width: max(7px, 0.9vw);
   aspect-ratio: 1;
   background-color: var(--color-bg-light);
   border-radius: 50%;
@@ -1213,7 +1216,7 @@ h4,
 }
 .marquee-line__list {
   white-space: nowrap;
-  animation: marquee-scroll 8s linear infinite;
+  animation: marquee-line 25s linear infinite;
   width: 130%;
 }
 .marquee-line__disc {
@@ -1234,9 +1237,15 @@ h4,
 }
 .marquee-line__img {
   height: 100%;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  transition: transform 3s ease-out;
+}
+.marquee-line__img:hover {
+  transform: rotateY(180deg);
 }
 
-@keyframes marquee-scroll {
+@keyframes marquee-line {
   0% {
     transform: translateX(10%);
   }
