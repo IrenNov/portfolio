@@ -1,13 +1,13 @@
 .portfolio {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: repeat(auto-fit, 50%);
     grid-template-rows: repeat(auto-fit, 90%);
     overflow: hidden;
     align-items: center;
     justify-items: center;
     
-    @include mobile {
+    @include mobile-s {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(auto-fit, 47%);
         justify-content: center;
@@ -19,7 +19,7 @@
         width:  max(250px, 21.07vw);
         padding-right: 10.42vw;
         overflow-x: visible;
-        @include mobile {
+        @include mobile-s {
             order: 1;
         }
         h2 {
@@ -29,11 +29,12 @@
         }
 
         p {
-            
+            text-align: end;
             line-height: 133%;
             text-transform: lowercase;
             @include fluid-text(24, 14);
-
+            width: 110%;
+            padding-right: 10%;
             display: -webkit-box;
             -webkit-line-clamp: 5;
             -webkit-box-orient: vertical;
