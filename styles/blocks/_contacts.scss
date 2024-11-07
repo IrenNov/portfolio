@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    padding: 5vw 10vw;
+    padding: 5vw 15vw;
     height: fit-content;
 
     &__svg {
@@ -64,7 +64,10 @@
         .word-cont {
                 fill: var(--color-light-text);
                 animation: invalid 6s infinite;
+                
             }
+
+            
             @keyframes invalid {
                 49% {
                     translate: 0px 0;
