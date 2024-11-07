@@ -15,7 +15,8 @@
 
         .word-an {
             transform: translateX(10%) translateY(45%);
-            stroke-width: 14px;
+            stroke-width: 4px;
+            z-index: 4;
         }
         
         
@@ -46,7 +47,9 @@
         .fill {
             fill: url(#imagePattern_contacts);
             stroke: none;
-            
+            &.word-an {
+                fill: url(#imagePattern_vawe);
+            }
             .in-view {
                 opacity: 1;
                 transition: opacity 0.3s cubic-bezier(0.32, 0.15, 0.04, 1.03);
@@ -55,6 +58,7 @@
                 opacity: 0;
                 transition: opacity 10s cubic-bezier(0.32, 0.15, 0.04, 1.03);
             }
+            
             
         }  
         .word-cont {
