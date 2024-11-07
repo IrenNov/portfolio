@@ -12,7 +12,12 @@
         .fill {
             transition: opacity 2s cubic-bezier(0.32, 0.15, 0.04, 1.03);
         }
-
+        .h2 {
+            font-family: var(--font-family-second);
+           text-transform: uppercase;
+           letter-spacing: -5px;
+           font-size: 98px;
+        }
     
 
     .stroke {
@@ -23,22 +28,24 @@
     }
 
     .animate {
-        stroke-dasharray: 500;
-        stroke-dashoffset: 500;
+        stroke-dasharray: 700;
+        stroke-dashoffset: 700;
         transition: stroke-dashoffset 1s ease;
     }
+    
 
     .animate.in-view {
-        animation: draw 2s forwards;
+        animation: draw 3s forwards;
         animation-fill-mode: forwards;
-        
+        animation-delay: var(--delay, 0s); 
     }
     
     .animate.out-of-view {
-        animation: drawdown 2s forwards;
+        animation: drawdown 3s forwards;
         animation-fill-mode: forwards;
-       
     }
+    
+    
     
     @keyframes draw {
         to {
@@ -54,7 +61,7 @@
         }
 
         to {
-            stroke-dashoffset: 500;
+            stroke-dashoffset: 700;
             
         }
     }

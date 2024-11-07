@@ -42,7 +42,9 @@
     position: absolute;
     top: -6vw;
     left: 0;
-
+  @include mobile {
+    top: -25vw;
+  }
    }
 
   

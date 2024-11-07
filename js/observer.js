@@ -19,8 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, {
         root: null, // viewport
-        threshold: 0.6 
+        threshold: 0.56 
     });
+    
 
     // Наблюдаем за секцией с id 'aboutme'
     const targetSection = document.getElementById('aboutme');
@@ -36,5 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const skillsSection = document.getElementById('skills');
     if (skillsSection) {
         observer.observe(skillsSection);
+    }
+
+    const contactsSection = document.getElementById('contacts');
+    if (contactsSection) {
+        observer.observe(contactsSection);
     }
 });

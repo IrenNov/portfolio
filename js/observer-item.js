@@ -10,7 +10,7 @@ document.querySelectorAll('.rotate-hover').forEach((wrapper) => {
 
     wrapper.addEventListener('mouseleave', () => {
         // Плавный сброс поворота с использованием CSS
-        wrapper.style.transition = 'transform 0.5s ease'; // Добавляем плавный переход
+        wrapper.style.transition = 'transform 0.8s ease'; // Добавляем плавный переход
         wrapper.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
     });
 });
