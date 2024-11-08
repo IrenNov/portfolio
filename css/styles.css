@@ -359,12 +359,10 @@ h4,
   width: 100%;
   height: 100%;
   background-color: var(--color-dark);
-  /* Цвет фона предзагрузчика */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  /* Обеспечиваем, чтобы предзагрузчик был поверх всех элементов */
   transition: opacity 1.5s ease 0.5s;
 }
 .preloader__container {
@@ -866,7 +864,8 @@ h4,
   height: max(93px, 11.85vw);
 }
 .aboutme ::-webkit-scrollbar-track {
-  background-color: var(--color-light-text); /* Цвет фона трека */
+  background-color: var(--color-light-text);
+  /* Цвет фона трека */
 }
 .aboutme ::-webkit-scrollbar-thumb {
   background-color: var(--color-dark-rgba);
@@ -1320,6 +1319,22 @@ h4,
   transform: rotateY(360deg);
 }
 
+@media (hover: none) {
+  .marquee-line__img {
+    animation: rotateImage var(--dur) var(--del) ease-out infinite;
+  }
+}
+@keyframes rotateImage {
+  0% {
+    transform: rotateY(0deg);
+  }
+  20% {
+    transform: rotateY(360deg);
+  }
+  40% {
+    transform: rotateY(0deg);
+  }
+}
 @keyframes marquee-line {
   0% {
     transform: translateX(10%);
@@ -1370,7 +1385,12 @@ h4,
 }
 .particle-btn .wrap {
   padding: 5%;
-  transform: scale(0.8) translateY(-80%);
+  transform: scale(0.9) translateY(-67%);
+}
+@media (max-width: 425px) {
+  .particle-btn .wrap {
+    transform: scale(0.6) translateY(-100%);
+  }
 }
 .particle-btn .particle {
   --f: 0.6;

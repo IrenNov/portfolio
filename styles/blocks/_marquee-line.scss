@@ -17,6 +17,7 @@
 
         width: calc(130%);
     }
+
     &__disc {
         color: var(--color-dark);
         text-transform: lowercase;
@@ -39,7 +40,7 @@
         aspect-ratio: 1;
         justify-content: center;
         flex: none;
-        
+
     }
 
     &__img {
@@ -51,6 +52,29 @@
 
     &__img:hover {
         transform: rotateY(360deg);
+    }
+}
+
+@media (hover: none) {
+    .marquee-line__img {
+        animation: rotateImage var(--dur) var(--del) ease-out infinite;
+    }
+
+}
+
+
+
+@keyframes rotateImage {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    20% {
+        transform: rotateY(360deg);
+    }
+
+    40% {
+        transform: rotateY(0deg);
     }
 }
 

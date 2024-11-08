@@ -2,6 +2,7 @@
     text-align: center;
     width: 37.29vw;
     height: 100%;
+
     &__wrapper {
         max-width: 100%;
         background-color: var(--color-accent);
@@ -15,8 +16,7 @@
 
     &__over {
         grid-area: stack;
-        filter: drop-shadow(25px 5px 10px var(--color-dark-rgba))
-                 drop-shadow(-5px 5px 18px var(--color-dark-rgba));
+        filter: drop-shadow(25px 5px 10px var(--color-dark-rgba)) drop-shadow(-5px 5px 18px var(--color-dark-rgba));
     }
 
     &__svg {

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dotsContainer = document.querySelector('.sites__dots');
     let currentSlide = 0;
 
-    // Создаем точки для каждого слайда
+    
     slides.forEach((_, index) => {
         const dot = document.createElement('div');
         dot.classList.add('sites__dot');
@@ -16,24 +16,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const dots = document.querySelectorAll('.sites__dot');
 
-    // Функция для перехода к конкретному слайду
+    
     function goToSlide(index) {
         slides[index].scrollIntoView({ behavior: 'smooth' });
         updateDots(index);
         currentSlide = index;
     }
 
-    // Обновление активной точки
+    
     function updateDots(index) {
         dots.forEach(dot => dot.classList.remove('sites__dot--active'));
         dots[index].classList.add('sites__dot--active');
     }
 
-    // Используем IntersectionObserver для отслеживания текущего слайда
+    
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.5 // Слайд должен быть наполовину виден, чтобы считаться активным
+        threshold: 0.5 
     };
 
     const observer = new IntersectionObserver((entries) => {

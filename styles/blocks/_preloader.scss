@@ -5,12 +5,12 @@
     width: 100%;
     height: 100%;
     background-color: var(--color-dark);
-    /* Цвет фона предзагрузчика */
+    
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    /* Обеспечиваем, чтобы предзагрузчик был поверх всех элементов */
+    
     transition: opacity 1.5s ease 0.5s;
 
     &__container {

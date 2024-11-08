@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: end;
     justify-content: space-between;
-    
+
 
 
     div {
@@ -39,36 +39,37 @@
 
     &:hover {
         div {
-       background-color: var(--color-accent-org);     
+            background-color: var(--color-accent-org);
         }
+
         .burger-button__line2 {
             animation: rotate 0.5s ease 2 forwards;
         }
 
-    
-      @keyframes rotate {
-        0% {
-            transform: rotate(0deg);
-        }
 
-        25% {
-            transform: rotate(10deg);
-        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
 
-        50% {
-            transform: rotate(-10deg);
-        }
+            25% {
+                transform: rotate(10deg);
+            }
 
-        75% {
-            transform: rotate(10deg);
-        }
+            50% {
+                transform: rotate(-10deg);
+            }
 
-        100% {
-            transform: rotate(0deg);
+            75% {
+                transform: rotate(10deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
         }
-    }  
 
     }
 
-    
+
 }
