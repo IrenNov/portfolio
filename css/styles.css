@@ -1461,6 +1461,9 @@ h4,
   height: -moz-fit-content;
   height: fit-content;
 }
+.contacts .scroll-margin {
+  top: 0vw;
+}
 .contacts__svg {
   position: relative;
   margin-bottom: -1vh;
