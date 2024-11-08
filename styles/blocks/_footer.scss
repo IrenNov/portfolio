@@ -1,0 +1,39 @@
+.footer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    padding: 2vw;
+    transition: opacity 0s;
+    align-items: end;
+    color: rgba(223, 204, 169, 0.5);
+
+    p:nth-child(1) {
+        grid-column: 1 / 3;
+        grid-row: 1;
+        justify-self: center;
+        text-align: center;
+        text-transform: lowercase;
+        letter-spacing: -1.5px;
+        margin-bottom: 3vw;
+        @include fluid-text(28, 12);
+    }
+
+    p:nth-child(2) {
+        margin-bottom: 0;
+        @include fluid-text(18, 9);
+    }
+
+    a {
+        justify-self: end;
+        margin-right: 2vw;
+        
+        width: 4.17vw;
+        
+        
+svg{
+         width: 100%;   
+         height: auto;
+        }
+    }
+
+}

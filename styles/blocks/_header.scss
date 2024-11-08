@@ -1,11 +1,8 @@
 .header {
-  padding-top: 2.08vw;
-  padding-bottom: 1.04vw;
+  
   position: sticky;
   top: 0;
-  background-color: rgba(34, 32, 38, 0.5);
-  backdrop-filter: blur(30px);
-  box-shadow: var(--shadow);
+ 
   z-index: 10;
 
   &__burger-button {

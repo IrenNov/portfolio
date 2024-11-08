@@ -11,6 +11,7 @@
 }
         .fill {
             transition: opacity 2s cubic-bezier(0.32, 0.15, 0.04, 1.03);
+            
         }
         .h2 {
             font-family: var(--font-family-second);
@@ -36,7 +37,7 @@
     
 
     .animate.in-view {
-        animation: draw 3s forwards;
+        animation: draw 3s 1s forwards;
         animation-fill-mode: forwards;
         animation-delay: var(--delay, 0s); 
     }

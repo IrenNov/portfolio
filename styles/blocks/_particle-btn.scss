@@ -9,13 +9,13 @@ $t: 1s;
 
 .particle-btn {
     margin-top: 5%;
-    margin-inline: 5%;
+    margin-inline: 10%;
     display: flex;
     justify-content: center;
     border: none;
     --m: 1;
     position: relative;
-    padding: 2.5vw 2.25vw;
+    padding: 4.5vw 6.25vw;
     background: none; 
     color: #23429e;
     font: 700 3.5em/ 1 montserrat, sans-serif;
@@ -23,9 +23,9 @@ $t: 1s;
         content: '';
         position: absolute;
         top: 75%;
-        left: 5%;
+        left: 15%;
         width: 0;
-        height: 15%;
+        height: 10%;
         background: url(../image/hover-line.svg) center/contain no-repeat;
         transition-duration: 3s;
         transition: width 2s ease;
@@ -49,7 +49,9 @@ $t: 1s;
             --k: 1
         }
     }
-
+    .wrap {
+        padding: 5%;
+    }
     .particle {
         --f: 1;
         --pos-k: max(0, var(--k));
@@ -96,7 +98,7 @@ $t: 1s;
             translate: -50% -50%;
             scale: calc(var(--f)*(1 - 2*var(--abs-d)));
             text-align: center;
-            filter: blur(1.5px);
+            filter: blur(0.5px);
             background: radial-gradient(83.94% 85.44% at 50% 50%, rgb(204, 90, 43) 0%, rgb(255, 179, 95) 14.499999582767487%, rgb(108, 239, 235) 47.999998927116394%, rgb(255, 250, 190) 99.98999834060669%);
             background-clip: text;
             color: transparent;
