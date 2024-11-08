@@ -51,9 +51,11 @@ $t: 1s;
     }
     .wrap {
         padding: 5%;
+        
+    transform: scale(0.8) translateY(-80%);
     }
     .particle {
-        --f: 1;
+        --f: 0.4;
         --pos-k: max(0, var(--k));
         --neg-k: max(0, -1*var(--k));
         --low-c: min(1, 4*(1 - var(--pos-k)));
@@ -98,7 +100,7 @@ $t: 1s;
             translate: -50% -50%;
             scale: calc(var(--f)*(1 - 2*var(--abs-d)));
             text-align: center;
-            filter: blur(0.5px);
+            filter: blur(1px);
             background: radial-gradient(83.94% 85.44% at 50% 50%, rgb(204, 90, 43) 0%, rgb(255, 179, 95) 14.499999582767487%, rgb(108, 239, 235) 47.999998927116394%, rgb(255, 250, 190) 99.98999834060669%);
             background-clip: text;
             color: transparent;
