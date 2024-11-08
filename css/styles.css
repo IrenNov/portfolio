@@ -1246,6 +1246,9 @@ h4,
   height: max(200px, 35.83vw);
   align-content: center;
 }
+.skills .scroll-marg {
+  top: -8vw;
+}
 .skills__title {
   width: 110%;
   height: auto;
@@ -1370,7 +1373,7 @@ h4,
   transform: scale(0.8) translateY(-80%);
 }
 .particle-btn .particle {
-  --f: 0.4;
+  --f: 0.6;
   --pos-k: max(0, var(--k));
   --neg-k: max(0, -1*var(--k));
   --low-c: min(1, 4*(1 - var(--pos-k)));
@@ -1433,7 +1436,8 @@ h4,
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  padding: 10vw 10vw;
+  gap: 4vh;
+  padding: 10vh 10vw;
   height: -moz-fit-content;
   height: fit-content;
 }

@@ -55,7 +55,7 @@ $t: 1s;
     transform: scale(0.8) translateY(-80%);
     }
     .particle {
-        --f: 0.4;
+        --f: 0.6;
         --pos-k: max(0, var(--k));
         --neg-k: max(0, -1*var(--k));
         --low-c: min(1, 4*(1 - var(--pos-k)));
